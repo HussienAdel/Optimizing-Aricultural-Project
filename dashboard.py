@@ -82,7 +82,7 @@ app.layout = html.Div([
         html.Div([
             
             html.H2(children="Select the Temperature Range", style={'color': 'black', 'textAlign': 'left'}),
-            dcc.Dropdown(temp_range, value=temp_range[0], id='dropdown-temp-range', style={'width': '100%'})
+            dcc.Dropdown(temp_range, value=temp_range[0], id='dropdown-temp-range', style={'width': '100%', 'font-size': '20px'})
             
         ], style={'width': '30%', 'padding': '10px'}),
         
@@ -90,7 +90,7 @@ app.layout = html.Div([
         html.Div([
             
             html.H2(children="Select the Humidity Range", style={'color': 'black', 'textAlign': 'left'}),
-            dcc.Dropdown(humid_range, value=humid_range[0], id='dropdown-humid-range', style={'width': '100%'})
+            dcc.Dropdown(humid_range, value=humid_range[0], id='dropdown-humid-range', style={'width': '100%', 'font-size': '20px'})
             
         ], style={'width': '30%', 'padding': '10px'}),
         
@@ -98,7 +98,7 @@ app.layout = html.Div([
         html.Div([
             
             html.H2(children="Select the Rainfall Range", style={'color': 'black', 'textAlign': 'left'}),
-            dcc.Dropdown(rain_range, value=rain_range[0], id='dropdown-rain-range', style={'width': '100%'})
+            dcc.Dropdown(rain_range, value=rain_range[0], id='dropdown-rain-range', style={'width': '100%', 'font-size': '20px'})
             
         ], style={'width': '30%', 'padding': '10px'})
         
@@ -114,7 +114,7 @@ app.layout = html.Div([
     
     html.H2(children="Select the Crop to show the Climatic Conditions", style={'textAlign': 'left', 'color': 'black'}),
 
-    dcc.Dropdown(df.label.unique(), value='rice', id='dropdown-labels'),
+    dcc.Dropdown(df.label.unique(), value='rice', id='dropdown-labels', style={'fontSize': '20px'}),
     
     html.Div([
         
@@ -126,7 +126,8 @@ app.layout = html.Div([
     
     
     html.H2(children="Select from the Soil Conditions", style={'textAlign': 'left', 'color': 'black'}),
-    dcc.Dropdown(['Nitrogen', 'Phosphorus', 'Potassium', 'PH'], value='Nitrogen', id='dropdown-soil-conditions'),
+    dcc.Dropdown(['Nitrogen', 'Phosphorus', 'Potassium', 'PH'], value='Nitrogen', id='dropdown-soil-conditions', style={'fontSize': '20px'}),
+
     dcc.Graph(id='Graph-soil-conditions'),
         
     #'''hint'''    
